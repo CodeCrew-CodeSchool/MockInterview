@@ -30,28 +30,65 @@
 })();
 
 
-function showAnswer(questionNumber) {
-  let question = "";
-  let answer = "";
+/* --- Render helper: convert Markdown-style fences to <pre><code> for Prism --- */
+function renderAnswerHTML(input) {
+  if (!input) return "<em>No answer yet.</em>";
 
-  for (const category in questions) {
-    if (questions[category][questionNumber]) {
-      question = questions[category][questionNumber];
-      break;
-    }
-  }
+  // Convert ```lang ... ``` into <pre><code class="language-lang">...</code></pre>
+  // The answers use <br> inside code, so we translate <br> -> \n within fences.
+  const converted = input.replace(/```(\w+)?<br?>([\s\S]*?)```/gi, (_, lang = "", codePart) => {
+    const language = lang.trim() || "plaintext";
+    // Turn <br> into real newlines for code blocks
+    const codeWithNewlines = codePart
+      .replace(/<br\s*\/?>/gi, "\n")
+      .replace(/&nbsp;/g, " ");
 
-  for (const category in answers) {
-    if (answers[category] && answers[category][questionNumber]) {
-      answer = answers[category][questionNumber];
-      break;
-    }
-  }
+    // Escape HTML so code renders safely
+    const escaped = codeWithNewlines
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
 
-  document.getElementById("questionTitle").textContent = `${questionNumber}. ${question}`;
-  document.getElementById("answer").innerHTML = answer;
+    return `<pre class="language-${language} line-numbers"><code class="language-${language}">${escaped}</code></pre>`;
+  });
 
+  return converted;
 }
 
+/* --- Find question/answer by number across categories --- */
+function findQA(num) {
+  let categoryFound = null, questionText = null, answerHTML = null;
 
+  for (const [cat, map] of Object.entries(questions)) {
+    if (Object.prototype.hasOwnProperty.call(map, num)) {
+      categoryFound = cat;
+      questionText = map[num];
+      break;
+    }
+  }
+  if (categoryFound && answers[categoryFound] && answers[categoryFound][num]) {
+    answerHTML = answers[categoryFound][num];
+  }
+  return { category: categoryFound, questionText, answerHTML };
+}
 
+/* --- Show the answer on question.html --- */
+function showAnswer(num) {
+  const { questionText, answerHTML } = findQA(num);
+  const titleEl = document.getElementById("questionTitle");
+  const answerEl = document.getElementById("answer");
+
+  if (!questionText) {
+    titleEl.textContent = `#${num}`;
+    answerEl.innerHTML = "<em>Question not found.</em>";
+    return;
+  }
+
+  titleEl.textContent = `${num}. ${questionText}`;
+  answerEl.innerHTML = renderAnswerHTML(answerHTML);
+
+  // Kick Prism after injecting the HTML
+  if (window.Prism) {
+    Prism.highlightAllUnder(answerEl);
+  }
+}

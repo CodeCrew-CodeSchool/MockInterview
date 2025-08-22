@@ -77,3 +77,83 @@ h3 {
 }
 
 body.splash-active { overflow: hidden; }
+
+/* --- Code block look & feel --- */
+pre[class*="language-"] {
+  background: #0b0f14;   /* near-black background */
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  overflow: auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+
+code[class*="language-"] {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ===== VS Code Dark+ feel for Prism ===== */
+pre[class*="language-"] {
+  background: #1e1e1e;        /* VSCode dark bg */
+  color: #d4d4d4;             /* default fg */
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+
+/* Better font + size for code */
+code[class*="language-"] {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* Token colors (VS Code Dark+) */
+code[class*="language-"] .token.comment,
+code[class*="language-"] .token.prolog,
+code[class*="language-"] .token.doctype,
+code[class*="language-"] .token.cdata { color: #6A9955 !important; }   /* comments */
+
+code[class*="language-"] .token.punctuation { color: #d4d4d4 !important; } /* ; , . ( ) { } */
+
+code[class*="language-"] .token.keyword,
+code[class*="language-"] .token.atrule { color: #C586C0 !important; }   /* if, return, for */
+
+code[class*="language-"] .token.string,
+code[class*="language-"] .token.char { color: #CE9178 !important; }     /* strings */
+
+code[class*="language-"] .token.number { color: #B5CEA8 !important; }   /* numbers */
+
+code[class*="language-"] .token.boolean { color: #569CD6 !important; }  /* true/false */
+
+code[class*="language-"] .token.function { color: #DCDCAA !important; } /* fn names */
+
+code[class*="language-"] .token.class-name,
+code[class*="language-"] .token.builtin { color: #4EC9B0 !important; }  /* classes/types */
+
+code[class*="language-"] .token.property,
+code[class*="language-"] .token.symbol,
+code[class*="language-"] .token.constant { color: #9CDCFE !important; } /* obj props */
+
+code[class*="language-"] .token.operator { color: #d4d4d4 !important; } /* + - * / = */
+
+code[class*="language-"] .token.regex,
+code[class*="language-"] .token.important { color: #D16969 !important; }/* regex/important */
+
+code[class*="language-"] .token.namespace { color: #4EC9B0 !important; }
+
+/* Selection look (like VS Code) */
+pre[class*="language-"] ::selection,
+code[class*="language-"] ::selection {
+  background: #264f78; color: inherit;
+}
+
+/* Line numbers (if plugin enabled) */
+pre.line-numbers { padding-left: 3.2em; }
+pre.line-numbers .line-numbers-rows {
+  border-right: 1px solid #2b2b2b;
+}
+pre.line-numbers .line-numbers-rows > span:before {
+  color: #858585;
+}
