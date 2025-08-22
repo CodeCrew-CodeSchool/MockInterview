@@ -337,10 +337,11 @@ const answers = {
     123: "<b>Logic:</b><br>Find the maximum value in a BST:<br>- Go to the rightmost node.<br>- That node contains the largest value.<br><br><strong>Example:</strong><br>```js<br>function findMaximumValue(bst) {<br>  if (!bst.root) return null;<br>  let current = bst.root;<br>  while (current.right) current = current.right;<br>  return current.value; // Found rightmost<br>}<br>```"
   },
   DIJKSTRA: {
-    124: "Use Dijkstra's algorithm to find the shortest path in a simple weighted graph.",
-    125: "Use a priority queue to track minimum distances while updating neighbors (medium difficulty).",
-    126: "Solve a complex graph shortest path using Dijkstra with custom edge weights and nodes (hard)."
+    124: "<b>Difficulty:</b> Easy<br>📄 <a href='./js/solutions.xlsx' download>Download Solution Sheet</a>",
+    125: "<b>Difficulty:</b> Medium<br>📄 <a href='./js/./solutions.xlsx' download>Download Solution Sheet</a>",
+    126: "<b>Difficulty:</b> Challenging<br>📄 <a href='./js/solutions.xlsx' download>Download Solution Sheet</a>"
   },
+
   "SYSTEM DESIGN": {
     127: "Use Array/List for slots, LinkedList for vehicle entry/exit.",
     128: "Use Queue for messages, HashMap for users, and List for conversations.",
