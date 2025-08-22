@@ -82,50 +82,64 @@ const questions = {
     68: "Name a regression model and a situation where you will use it.",
     69: "What is reinforcement learning?",
     70: "What are recommendation systems? What are its two main kinds of filtering?",
-    71: "Explain BackPropagation.",
-    72: "What is Natural Language Processing? How does it work? Name a library you find useful for doing this process.",
-    73: "What is RAG? How does it work?",
-    74: "What is a Transformer? How does it work?",
-    75: "What is Sentiment Analysis? Name a library and explain how you will use it."
+    71: "Name an approach to evaluate the model performance. How does this work?",
+    72: "Explain Cross-Validation and train/test split approaches. For which cases is one better than the other?",
+    73: "Explain BackPropagation.",
+    74: "Name a prompting technique and provide a usage example.",
+    75: "What are pipelines for model development? Why are they important?",
+    76: "What is the difference between classical machine learning and deep learning?",
+    77: "What is the difference between supervised learning and unsupervised learning? Provide examples for each.",
+    78: "What is the difference between Breadth-First Search and Depth-First Search?",
+    79: "What is the difference between an informed search and an uninformed search? Provide an example for each.",
+    80: "Name an informed search algorithm and explain it.",
+    81: "What is a tree data structure? Name its part and a type of tree.",
+    82: "What is a graph? Name its parts.",
+    83: "Explain the binary search algorithm. What is its time complexity?",
+    84: "What is Natural Language Processing? How does it work? Name a library you find useful for doing this process.",
+    85: "What is RAG? How does it work?",
+    86: "What is a Transformer? How does it work?",
+    87: "What is Fine-Tuning? How does it work? Provide examples.",
+    88: "What is Sentiment Analysis? Name a library and explain how you will use it."
   },
   ARRAYS: {
-    76: "Find the Missing Number: Given an array containing n distinct numbers taken from 0 to n, find the one that is missing.",
-    77: "Median of Two Sorted Arrays: Given two sorted arrays, find the median element when the arrays are merged.",
-    78: "Largest Subarray with Zero Sum: Find the length of the largest subarray with a sum of zero in a given array.",
-    79: "Maximum Product Subarray: Find the contiguous subarray within an array that has the largest product."
+    89: "Find the Missing Number: Given an array containing n distinct numbers taken from 0 to n, find the one that is missing.",
+    90: "Median of Two Sorted Arrays: Given two sorted arrays, find the median element when the arrays are merged.",
+    91: "Largest Subarray with Zero Sum: Find the length of the largest subarray with a sum of zero in a given array.",
+    92: "Maximum Product Subarray: Find the contiguous subarray within an array that has the largest product."
   },
   LINKEDLIST: {
-    80: "Reverse a LinkedList: Reverse a singly linked list in-place.",
-    81: "Detect a Cycle: Determine if a linked list has a loop.",
-    82: "Find Middle Node: Return the middle node of a linked list.",
-    83: "Merge Two Sorted Lists: Merge two sorted linked lists into one sorted list.",
-    84: "Remove Duplicates: Remove duplicate elements from a sorted linked list."
+    93: "Reverse a LinkedList: Reverse a singly linked list in-place.",
+    94: "Detect a Cycle: Determine if a linked list has a loop.",
+    95: "Find Middle Node: Return the middle node of a linked list.",
+    96: "Merge Two Sorted Lists: Merge two sorted linked lists into one sorted list.",
+    97: "Remove Duplicates: Remove duplicate elements from a sorted linked list."
   },
   "DOUBLELINKEDLIST": {
-    85: "Reverse a Doubly Linked List: Reverse a doubly linked list in-place.",
-    86: "Delete a Given Node: Delete a node from a doubly linked list in O(1) time.",
-    87: "Insert Before a Node: Insert a new node before a given node.",
-    88: "Check Palindrome: Check if the list reads the same forward and backward.",
-    89: "Detect a Cycle: Determine if the doubly linked list has a loop."
+    98: "Reverse a Doubly Linked List: Reverse a doubly linked list in-place.",
+    99: "Delete a Given Node: Delete a node from a doubly linked list in O(1) time.",
+    100: "Insert Before a Node: Insert a new node before a given node.",
+    101: "Check Palindrome: Check if the list reads the same forward and backward.",
+    102: "Detect a Cycle: Determine if the doubly linked list has a loop."
   },
   STACK: {
-    90: "Implement Stack: Implement a stack using an array or list.",
-    91: "Min Stack: Design a stack that supports retrieving the minimum element in constant time.",
-    92: "Evaluate Postfix: Evaluate a postfix (Reverse Polish) expression using a stack.",
-    93: "Undo Operation: Simulate an undo operation using a stack."
+    103: "Implement Stack: Implement a stack using an array or list.",
+    104: "Min Stack: Design a stack that supports retrieving the minimum element in constant time.",
+    105: "Evaluate Postfix: Evaluate a postfix (Reverse Polish) expression using a stack.",
+    106: "Undo Operation: Simulate an undo operation using a stack."
   },
   "SYSTEM DESIGN": {
-    94: "Parking Lot Design: Design a parking lot management system.",
-    95: "Chat Application Design: Design a simple chat application (server, clients, messages, etc.).",
-    96: "Design a Booking System: Design a reservation and booking system for a hotel or airline.",
-    97: "Design an Online Food Ordering System: Design a system for online food ordering and delivery.",
-    98: "Design a Distributed Messaging System: Design a distributed messaging platform like WhatsApp or Slack.",
-    99: "Design a Content Recommendation System: Design a system that recommends content to users based on their preferences and behavior.",
-    100: "Design a Web Browser Cleaner: Design a system that can clean the most recent history or cookies of a user.",
-    101: "Design a System to Navigate Web History: Design a system to go forward and backward through user history.",
-    102: "Design a storage system for receipts: Design an efficient storage system only for keeping receipts."
+    107: "Parking Lot Design: Design a parking lot management system.",
+    108: "Chat Application Design: Design a simple chat application (server, clients, messages, etc.).",
+    109: "Design a Booking System: Design a reservation and booking system for a hotel or airline.",
+    110: "Design an Online Food Ordering System: Design a system for online food ordering and delivery.",
+    111: "Design a Distributed Messaging System: Design a distributed messaging platform like WhatsApp or Slack.",
+    112: "Design a Content Recommendation System: Design a system that recommends content to users based on their preferences and behavior.",
+    113: "Design a Web Browser Cleaner: Design a system that can clean the most recent history or cookies of a user.",
+    114: "Design a System to Navigate Web History: Design a system to go forward and backward through user history.",
+    115: "Design a storage system for receipts: Design an efficient storage system only for keeping receipts."
   }
 };
+
 
 const answers = {
   GENERAL: {
@@ -207,55 +221,64 @@ const answers = {
   },
   "AI Development and Theory": {
     66: "A neural network is a layered model mimicking how the brain processes input.",
-    67: "Some classification models include Logistic Regression, KNN, SVM, Naive Bayes, Decision Tree,and Random Forest. <br> Used for classifying. For example it can be use for spam mail detection or sentimental analysis.",
-    68: "Some regression models include Linear Regression and Polynomial. They are use for predictions based certain data. For example predicting house prices based on size.",
-    69: "Learning by trial and error with rewards/punishments — used in gaming, robotics.",
-    70: "Recommend items based on user data. Two types: Collaborative and Content-based filtering.",
-    71: "Algorithm to update weights in a neural network by propagating errors backward.",
-    72: "NLP processes human language. Example library: spaCy or NLTK.",
-    73: "RAG = Retrieval Augmented Generation. Combines knowledge base with generative LLMs.",
-    74: "Transformers use attention mechanisms to understand token relationships. Core of models like BERT, GPT, Gemini.",
-    75: "Determines sentiment (positive/negative) in text. Use libraries like TextBlob or HuggingFace transformers."
+    67: "Some classification models include Logistic Regression, KNN, SVM, Naive Bayes, and Random Forest. Used for classifying data — e.g., spam detection or sentiment classification.",
+    68: "Regression models like Linear or Polynomial Regression are used for prediction problems — e.g., predicting housing prices based on square footage.",
+    69: "Learning by trial and error using rewards or penalties. Used in game AI, robotics, and dynamic environments.",
+    70: "Recommendation systems suggest items to users. Two types: Collaborative filtering (based on user behavior) and Content-based filtering (based on item features).",
+    71: "Accuracy, Precision, Recall, F1-score, and Confusion Matrix are commonly used. These evaluate how well the model classifies or predicts based on true/false positives and negatives.",
+    72: "Train/Test split separates a portion (e.g., 80/20) of data for testing, good for large datasets. Cross-validation divides data into folds and cycles through training/testing — better for small datasets or reducing variance.",
+    73: "BackPropagation is an algorithm used to update weights in a neural network by computing the gradient of the loss function and propagating the error backward through the layers.",
+    74: "One prompting technique is Chain-of-Thought prompting — ask the model to show reasoning step-by-step. Example: 'Explain why X before giving the answer.'",
+    75: "Pipelines combine preprocessing, feature engineering, model training, and evaluation into one reusable flow. Helps reproducibility and reduces errors in production.",
+    76: "Classical ML uses features defined by humans and includes algorithms like SVM, Decision Trees. Deep Learning uses multi-layered neural nets to learn features automatically — e.g., image classification with CNNs.",
+    77: "Supervised learning uses labeled data (e.g., image + label), like classification and regression. Unsupervised learning uses unlabeled data to find patterns — e.g., clustering customer behavior.",
+    78: "BFS explores all neighbors first (queue-based), DFS goes deep before backtracking (stack/recursion). BFS finds shortest path in unweighted graphs.",
+    79: "Uninformed search (e.g., BFS, DFS) uses no knowledge of goal location. Informed search (e.g., A*) uses heuristics to guide search efficiently.",
+    80: "A* Search is an informed search that uses g(n) (cost so far) + h(n) (estimated cost to goal) to pick the best path.",
+    81: "A tree has nodes and edges. Each node can have children. Common parts: root, leaf, child, parent. Example: Binary Search Tree.",
+    82: "A graph is a collection of nodes (vertices) and connections (edges). It can be directed/undirected and weighted/unweighted.",
+    83: "Binary Search finds a value in a sorted array by dividing the search space in half. Time complexity is O(log n).",
+    84: "NLP processes human language for tasks like translation, summarization, sentiment analysis. Libraries include spaCy, NLTK, and HuggingFace Transformers.",
+    85: "RAG (Retrieval-Augmented Generation) combines information retrieval (like search) with generation from a language model. It fetches relevant documents before answering.",
+    86: "Transformers use self-attention mechanisms to understand token relationships. They power models like BERT and GPT.",
+    87: "Fine-Tuning means training a pre-trained model on new, specific data. Example: Fine-tune GPT on legal documents to specialize it in law.",
+    88: "Sentiment Analysis detects emotion or opinion in text (positive/negative/neutral). Use libraries like TextBlob, Vader, or HuggingFace transformers to analyze review polarity."
   },
   ARRAYS: {
-    76: "<b>Logic:</b><br>Mark presence using a boolean array and scan 0..n for the first missing index:<br>- Create an array <code>present</code> of size <code>n+1</code> filled with <code>false</code>.<br>- Mark <code>present[x] = true</code> for each value <code>x</code> in <code>nums</code>.<br>- The first index still <code>false</code> is the missing number.<br>- Time O(n), Space O(n).<br><br><strong>Example:</strong><br>```js<br>function missingNumber(nums) {<br>  const n = nums.length;                          // numbers are from 0..n with one missing<br>  const present = new Array(n + 1).fill(false);   // presence map<br><br>  // mark all numbers we see<br>  for (let i = 0; i < n; i++) {<br>    present[nums[i]] = true;<br>  }<br><br>  // find the first number not present<br>  for (let i = 0; i <= n; i++) {<br>    if (!present[i]) return i;                    // missing one<br>  }<br><br>  return -1; // not expected to reach<br>}<br>```",
-
-    77: "<b>Logic:</b><br>Compute the median of two sorted arrays with two pointers (no full merge):<br>- Use pointers <code>i</code> and <code>j</code> to traverse <code>a</code> and <code>b</code> in order.<br>- Advance until you have consumed half of all elements, tracking the last two seen values.<br>- If total length is odd, answer is the current value; if even, average the last two.<br>- Time O(m+n), Space O(1).<br><br><strong>Example:</strong><br>```js<br>function findMedianSortedArrays(a, b) {<br>  const m = a.length, n = b.length;<br>  const total = m + n;                             // total elements across both arrays<br>  const mid = Math.floor(total / 2);               // index of median position<br>  let i = 0, j = 0, count = 0;                     // two pointers + how many we've consumed<br>  let prev = 0, curr = 0;                          // last two values seen during the walk<br><br>  while (count <= mid) {                           // walk until we reach the middle<br>    prev = curr;                                   // shift last value<br>    if (i < m && (j >= n || a[i] <= b[j])) {       // pick from 'a' if it's smaller (or 'b' exhausted)<br>      curr = a[i++];<br>    } else {<br>      curr = b[j++];<br>    }<br>    count++;<br>  }<br><br>  // odd -> current middle; even -> average of the two middle values<br>  return (total % 2 === 1) ? curr : (prev + curr) / 2;<br>}<br>```",
-
-    78: "<b>Logic:</b><br>Find the longest contiguous subarray of zeros by counting runs:<br>- Walk the array keeping a <code>currentCount</code> of consecutive zeros.<br>- On zero: increment and update <code>maxCount</code>.<br>- On non-zero: reset <code>currentCount</code> to 0.<br>- Answer is <code>maxCount</code>.<br><br><strong>Example:</strong><br>```js<br>let currentCount = 0;                              // length of current zero-run<br>let maxCount = 0;                                  // best (longest) run so far<br>for (let i = 0; i < arr.length; i++) {<br>  if (arr[i] === 0) {                              // still in a zero-run<br>    currentCount++;<br>    maxCount = Math.max(maxCount, currentCount);   // maybe a new best<br>  } else {<br>    currentCount = 0;                              // run broken, reset<br>  }<br>}<br>return maxCount;                                   // longest zero-chain length<br>```",
-
-    79: "<b>Logic:</b><br>Max product subarray (all numbers positive & non-zero):<br>- Track a running product <code>currProd</code> and global best <code>maxProd</code>.<br>- Each step: either extend the current product or start fresh at the current number.<br>- Since all numbers are positive, no need to track a min-product for sign flips.<br>- Time O(n), Space O(1).<br><br><strong>Example:</strong><br>```js<br>let maxProd = nums[0];                             // best product so far<br>let currProd = nums[0];                            // product ending at current index<br>for (let i = 1; i < nums.length; i++) {<br>  const num = nums[i];<br>  currProd = Math.max(num, currProd * num);        // extend or restart at num<br>  maxProd = Math.max(maxProd, currProd);           // update global best<br>}<br>return maxProd;                                    // maximum product over all subarrays<br>```"
-  }
-  ,
+    89: "<b>Logic:</b><br>Mark presence using a boolean array and scan 0..n for the first missing index:<br>- Create an array <code>present</code> of size <code>n+1</code> filled with <code>false</code>.<br>- Mark <code>present[x] = true</code> for each value <code>x</code> in <code>nums</code>.<br>- The first index still <code>false</code> is the missing number.<br>- Time O(n), Space O(n).<br><br><strong>Example:</strong><br>```js<br>function missingNumber(nums) {<br> const n = nums.length;<br> const present = new Array(n + 1).fill(false);<br> for (let i = 0; i < n; i++) {<br> present[nums[i]] = true;<br> }<br> for (let i = 0; i <= n; i++) {<br> if (!present[i]) return i;<br> }<br> return -1;<br>}<br>```",
+    90: "<b>Logic:</b><br>Compute the median of two sorted arrays with two pointers (no full merge):<br>- Use pointers <code>i</code> and <code>j</code> to traverse <code>a</code> and <code>b</code>.<br>- Advance until you have consumed half of all elements, tracking the last two seen values.<br>- If total length is odd, answer is the current value; if even, average the last two.<br>- Time O(m+n), Space O(1).<br><br><strong>Example:</strong><br>```js<br>function findMedianSortedArrays(a, b) {<br> const m = a.length, n = b.length;<br> const total = m + n;<br> const mid = Math.floor(total / 2);<br> let i = 0, j = 0, count = 0;<br> let prev = 0, curr = 0;<br> while (count <= mid) {<br> prev = curr;<br> if (i < m && (j >= n || a[i] <= b[j])) {<br> curr = a[i++];<br> } else {<br> curr = b[j++];<br> }<br> count++;<br> }<br> return (total % 2 === 1) ? curr : (prev + curr) / 2;<br>}<br>```",
+    91: "<b>Logic:</b><br>Find the longest contiguous subarray of zeros by counting runs:<br>- Walk the array keeping a <code>currentCount</code> of consecutive zeros.<br>- On zero: increment and update <code>maxCount</code>.<br>- On non-zero: reset <code>currentCount</code> to 0.<br><br><strong>Example:</strong><br>```js<br>let currentCount = 0;<br>let maxCount = 0;<br>for (let i = 0; i < arr.length; i++) {<br> if (arr[i] === 0) {<br> currentCount++;<br> maxCount = Math.max(maxCount, currentCount);<br> } else {<br> currentCount = 0;<br> }<br>}<br>return maxCount;<br>```",
+    92: "<b>Logic:</b><br>Max product subarray (all numbers positive & non-zero):<br>- Track a running product <code>currProd</code> and global best <code>maxProd</code>.<br>- Each step: either extend the current product or start fresh at the current number.<br>- Time O(n), Space O(1).<br><br><strong>Example:</strong><br>```js<br>let maxProd = nums[0];<br>let currProd = nums[0];<br>for (let i = 1; i < nums.length; i++) {<br> const num = nums[i];<br> currProd = Math.max(num, currProd * num);<br> maxProd = Math.max(maxProd, currProd);<br>}<br>return maxProd;<br>```"
+  },
   LINKEDLIST: {
-    80: "Iteratively reassign `.next` pointers while storing previous node.",
-    81: "Use Floyds cycle detection algorithm (slow & fast pointer).",
-    82: "Use slow and fast pointer; return slow when fast reaches end.",
-    83: "Compare head values and link smaller one recursively or iteratively.",
-    84: "Traverse list, compare current and next node, and skip duplicates."
+    93: "Iteratively reassign `.next` pointers while storing previous node.",
+    94: "Use Floyds cycle detection algorithm (slow & fast pointer).",
+    95: "Use slow and fast pointer; return slow when fast reaches end.",
+    96: "Compare head values and link smaller one recursively or iteratively.",
+    97: "Traverse list, compare current and next node, and skip duplicates."
   },
   DOUBLELINKEDLIST: {
-    85: "Swap `.next` and `.prev` pointers for each node while traversing.",
-    86: "Adjust `.next` and `.prev` of neighboring nodes; O(1) if node is given.",
-    87: "Create a new node and adjust `.prev` and `.next` of involved nodes.",
-    88: "Use two pointers from head and tail to compare values until they meet.",
-    89: "Similar to singly linked list — use visited set or slow/fast pointers."
+    98: "Swap `.next` and `.prev` pointers for each node while traversing.",
+    99: "Adjust `.next` and `.prev` of neighboring nodes; O(1) if node is given.",
+    100: "Create a new node and adjust `.prev` and `.next` of involved nodes.",
+    101: "Use two pointers from head and tail to compare values until they meet.",
+    102: "Similar to singly linked list — use visited set or slow/fast pointers."
   },
   STACK: {
-    90: "Use an array with push and pop functions.",
-    91: "Keep a stack of values and another of minimums.",
-    92: "Use stack to push operands; pop for operations; evaluate step by step.",
-    93: "Push operations to stack, pop to undo the last action."
+    103: "Use an array with push and pop functions.",
+    104: "Keep a stack of values and another of minimums.",
+    105: "Use stack to push operands; pop for operations; evaluate step by step.",
+    106: "Push operations to stack, pop to undo the last action."
   },
   "SYSTEM DESIGN": {
-    94: "Use Array/List for slots, LinkedList for vehicle entry/exit.",
-    95: "Use Queue for messages, HashMap for users, and List for conversations.",
-    96: "Use HashMap to store bookings, arrays for availability, and linked list for queues.",
-    97: "Stack for cart history, Array for items, Queue for delivery processing.",
-    98: "Queue + HashMap per user; distribute messages using event bus or socket buffer.",
-    99: "Use Arrays + HashMap for user-item matrix. Stack for recent views.",
-    100: "Use Stack to store recent sites and clear from top.",
-    101: "Two stacks: one for back, one for forward navigation.",
-    102: "Use HashMap with timestamps or categories to store receipts efficiently."
+    107: "Use Array/List for slots, LinkedList for vehicle entry/exit.",
+    108: "Use Queue for messages, HashMap for users, and List for conversations.",
+    109: "Use HashMap to store bookings, arrays for availability, and linked list for queues.",
+    110: "Stack for cart history, Array for items, Queue for delivery processing.",
+    111: "Queue + HashMap per user; distribute messages using event bus or socket buffer.",
+    112: "Use Arrays + HashMap for user-item matrix. Stack for recent views.",
+    113: "Use Stack to store recent sites and clear from top.",
+    114: "Two stacks: one for back, one for forward navigation.",
+    115: "Use HashMap with timestamps or categories to store receipts efficiently."
   }
 };
