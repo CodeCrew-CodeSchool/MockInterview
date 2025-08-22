@@ -5,8 +5,8 @@
 
   const KEY = 'sawSplashV1';         // bump this string if you ever want to force-show again
   const body = document.body;
-  const DELAY_MS = 600;              // visible time (fast)
-  const FADE_MS  = 250;              // fade time (match CSS)
+  const DELAY_MS = 2000;              // visible time (fast)
+  const FADE_MS  = 2000;              // fade time (match CSS)
 
   // If we've already shown it this session, remove immediately
   if (sessionStorage.getItem(KEY) === '1') {
